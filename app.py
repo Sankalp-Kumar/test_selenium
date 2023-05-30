@@ -1,5 +1,6 @@
 import streamlit as st
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 
 def scrape_data(url):
     options = webdriver.ChromeOptions()
