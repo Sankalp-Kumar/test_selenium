@@ -5,13 +5,14 @@ def scrape_data(url):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")  # Run Chrome in headless mode
 
-    with webdriver.Chrome(options=options) as driver:
-        driver.get(url)
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+
+    driver.get(url)
         # Perform web scraping actions using driver
 
         # Example: Scrape and display the page title
-        title = driver.title
-        st.write(f"Page Title: {title}")
+    title = driver.title
+    st.write(f"Page Title: {title}")
 
 def main():
     st.title("Web Scraping with Selenium on Streamlit Cloud")
