@@ -1,13 +1,27 @@
-from webdriver_manager.chrome import ChromeDriverManager
+import streamlit as st
+from undetected_chromedriver import Chrome, ChromeOptions
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+def scrape_data(url):
+    options = ChromeOptions()
+    options.add_argument("--headless")  # Run Chrome in headless mode
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    with Chrome(options=options) as driver:
+        driver.get(url)
+        # Perform web scraping actions using driver
 
+        # Example: Scrape and display the page title
+        title = driver.title
+        st.write(f"Page Title: {title}")
 
-ops =webdriver.ChromeOptions()
+def main():
+    st.title("Web Scraping with Streamlit and Undetected Chrome Driver")
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=ops)
+    # Example scraping URL
+    url = st.text_input("Enter a URL to scrape:")
+    if st.button("Scrape"):
+        scrape_data(url)
 
-url = 'https://www.google.com/maps/dir///@12.9568867,77.5861919,15z/data=!4m2!4m1!3e0'
+if __name__ == "__main__":
+    main()
 
-driver.get(url)
