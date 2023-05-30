@@ -1,12 +1,14 @@
 import streamlit as st
-from undetected_chromedriver import Chrome, ChromeOptions
+from undetected_chromedriver.v2 import ChromeDriverManager
+from selenium import webdriver
 
 def scrape_data(url):
-    options = ChromeOptions()
+    options = webdriver.ChromeOptions()
     options.add_argument("--headless")  # Run Chrome in headless mode
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    with Chrome(options=options) as driver:
+
+    with webdriver.Chrome(ChromeDriverManager().install(), options=options) as driver:
         driver.get(url)
         # Perform web scraping actions using driver
 
@@ -24,4 +26,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
