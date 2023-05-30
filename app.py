@@ -1,18 +1,19 @@
 import streamlit as st
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 
 def scrape_data(url):
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")  # Run Chrome in headless mode
 
     # Specify the path to the ChromeDriver binary
-    chromedriver_path = '/home/appuser/.wdm/drivers/chromedriver/linux64/113.0.5672.63/chromedriver'
+    #chromedriver_path = '/home/appuser/.wdm/drivers/chromedriver/linux64/113.0.5672.63/chromedriver'
 
     # Set up the webdriver with the executable_path parameter
-    driver = webdriver.Chrome(executable_path=chromedriver_path)
+    #driver = webdriver.Chrome(executable_path=chromedriver_path)
 
-    #driver = webdriver.Chrome(ChromeDriverManager().install())
+    #driver = webdriver.Firefox(GeckoDriverManager().install())
 
     driver.get(url)
         # Perform web scraping actions using driver
