@@ -13,7 +13,7 @@ def scrape_data(url):
     # Set up the webdriver with the executable_path parameter
     #driver = webdriver.Chrome(executable_path=chromedriver_path)
 
-    #driver = webdriver.Firefox(GeckoDriverManager().install())
+    driver = webdriver.Firefox(GeckoDriverManager().install())
 
     driver.get(url)
         # Perform web scraping actions using driver
