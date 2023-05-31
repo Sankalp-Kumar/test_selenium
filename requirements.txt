@@ -1,4 +1,6 @@
 streamlit
-seleniumbase
+#seleniumbase
 #chromedriver-autoinstaller
-webdriver_manager
+#webdriver_manager
+selenium==3.141.0
+webdriver_manager==3.5.1
