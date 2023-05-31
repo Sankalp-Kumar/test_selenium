@@ -37,6 +37,6 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get("https://www.google.com/maps/dir///@12.9568867,77.5861919,15z/data=!4m2!4m1!3e0")
+driver.get("https://www.google.com/maps/")
 
 st.write(driver.title)
