@@ -37,6 +37,6 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get("https://www.google.com/")
+driver.get("https://www.example.com/")
 
-st.write(driver.title)
+st.code(driver.page_source)
