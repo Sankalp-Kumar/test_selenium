@@ -5,10 +5,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 chrome_options = webdriver.ChromeOptions()
 chrome_options.binary_location = "/usr/bin/google-chrome-stable"
 # Set up the Chrome webdriver using webdriver_manager
-driver = webdriver.Chrome(ChromeDriverManager().install())
+driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
 
 # Open the webpage
-driver.get('https://www.amazon.com',options=chrome_options)
+driver.get('https://www.amazon.com')
 
 # Scrape the title of the webpage
 title = driver.title
