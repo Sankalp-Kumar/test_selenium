@@ -4,7 +4,7 @@ from undetected_chromedriver import Chrome, ChromeOptions
 options = ChromeOptions()
 
 # Set the path to the Chrome binary
-options.binary_location = '/usr/bin/google-chrome-stable'  # Adjust this path if needed
+#options.binary_location = '/usr/bin/google-chrome-stable'  # Adjust this path if needed
 
 # Set any additional options as needed
 # options.add_argument('--headless')  # Uncomment this line if you want to run in headless mode
