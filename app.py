@@ -1,6 +1,9 @@
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
+
+chrome_options = webdriver.ChromeOptions()
+chrome_options.binary_location = "/usr/bin/google-chrome-stable"
 # Set up the Chrome webdriver using webdriver_manager
 driver = webdriver.Chrome(ChromeDriverManager().install())
 
