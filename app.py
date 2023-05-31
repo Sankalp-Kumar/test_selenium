@@ -1,19 +1,23 @@
-from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
+from undetected_chromedriver import Chrome, ChromeOptions
 
+# Set up ChromeOptions
+options = ChromeOptions()
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.binary_location = "/usr/bin/google-chrome-stable"
-# Set up the Chrome webdriver using webdriver_manager
-driver = webdriver.Chrome(ChromeDriverManager().install(),options=chrome_options)
+# Set the path to the Chrome binary
+options.binary_location = '/usr/bin/google-chrome-stable'  # Adjust this path if needed
 
-# Open the webpage
-driver.get('https://www.amazon.com')
+# Set any additional options as needed
+# options.add_argument('--headless')  # Uncomment this line if you want to run in headless mode
 
-# Scrape the title of the webpage
+# Set up the Undetected ChromeDriver
+driver = Chrome(options=options)
+
+# Perform your web scraping operations
+driver.get("https://www.amazon.in")
+
 title = driver.title
+
 st.write(title)
 
 # Close the browser
 driver.quit()
-
