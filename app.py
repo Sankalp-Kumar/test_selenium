@@ -30,8 +30,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 @st.cache_resource
 def get_driver():
-    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
-    #return webdriver.Chrome(service=Service(ChromeDriverManager(version="113.0.5672.24").install()), options=options)
+    #return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+     return webdriver.Chrome(service=Service(ChromeDriverManager(version="113.0.5672.24").install()), options=options)
 options = Options()
 options.add_argument('--disable-gpu')
 options.add_argument('--headless')
