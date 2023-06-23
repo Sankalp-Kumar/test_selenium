@@ -9,3 +9,10 @@
 streamlit
 seleniumbase
 webdriver-manager
+pandas
+googlemaps
+numpy
+python_tsp
+openpyxl
+xlsxwriter
+pyxlsb
