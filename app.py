@@ -1,5 +1,5 @@
 #from undetected_chromedriver import Chrome, ChromeOptions
-
+from selenium.webdriver.common.by import By
 # Set up ChromeOptions
 #options = ChromeOptions()
 
