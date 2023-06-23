@@ -48,5 +48,5 @@ time.sleep(5)
 driver.find_element(By.XPATH, value="//span[@class='nav-line-2 nav-progressive-content']").click()
 ele = driver.find_elements(By.XPATH,value='//div[@data-component-type="s-search-result"]/descendant::a[@class="a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"]')
 for i in ele:
-    print(i.text)
+    st.write(i.text)
 #st.write(driver.title)
