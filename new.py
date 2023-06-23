@@ -8,13 +8,13 @@ from ortools.constraint_solver import routing_enums_pb2
 from ortools.constraint_solver import pywrapcp
 import streamlit as st
 
-master_data = pd.read_excel(r'D:\route optimization\TML & competition master data (1).xlsx', sheet_name='10loc')
+master_data = pd.read_excel('TML & competition master data (1).xlsx', sheet_name='10loc')
 master_data.head()
 st.markdown("### Multiple origins and multiple routes")
 st.subheader("Raw Data")
 st.write(master_data)
 
-df1 = pd.read_excel(r'D:\route optimization\start_end_dist_for_10_with_api_.xlsx')
+df1 = pd.read_excel('start_end_dist_for_10_with_api_.xlsx')
 #df1 = updated_df.copy()
 u_loc = df1['origin'].unique()
 #print(len(u_loc))
