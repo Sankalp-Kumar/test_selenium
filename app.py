@@ -38,6 +38,6 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get('https://amazon.com')
+driver.get('https://www.amazon.com/')
 
-st.code(driver.title)
+st.write(driver.title)
