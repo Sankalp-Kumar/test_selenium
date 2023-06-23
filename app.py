@@ -41,9 +41,10 @@ driver = get_driver()
 driver.get('https://www.amazon.in/')
 
 st.write(driver.title)
-
+time.sleep(5)
 driver.find_element(By.ID,value='twotabsearchtextbox').send_keys('snacks')
 driver.find_element(By.ID,value='nav-search-submit-text').click()
+time.sleep(5)
 driver.find_element(By.XPATH, value="//span[@class='nav-line-2 nav-progressive-content']").click()
 ele = driver.find_elements(By.XPATH,value='//div[@data-component-type="s-search-result"]/descendant::a[@class="a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal"]')
 for i in ele:
