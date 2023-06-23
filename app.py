@@ -40,4 +40,7 @@ options.add_argument('--headless')
 driver = get_driver()
 driver.get('https://www.amazon.com/')
 
+send_keys = driver.find_element(By.ID,"twotabsearchtextbox").send_keys("snacks")
+send_keys.click()
+
 st.write(driver.title)
