@@ -205,20 +205,24 @@ if number_of_vehicles :
         import time
         import numpy as np
         import random as rdm
+        from selenium.webdriver.chrome.options import Options
 
         def chrome_setup(chromeheadless = True, incognito_window=False,proxy_capabilities=None):
             '''It set up the Chrome environment to webscraping '''    
-            ops =webdriver.ChromeOptions()
-            ops.headless= chromeheadless
-            caps = DesiredCapabilities().CHROME
-            caps["pageLoadStrategy"] = "normal"  #  complete
+            #ops =webdriver.ChromeOptions()
+            #ops.headless= chromeheadless
+            ops = Options()
+            ops.add_argument('--disable-gpu')
+            ops.add_argument('--headless')
+            # caps = DesiredCapabilities().CHROME
+            # caps["pageLoadStrategy"] = "normal"  #  complete
             #caps["pageLoadStrategy"] = "eager"  #  interactive
             #caps["pageLoadStrategy"] = "none"    
-            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=ops,desired_capabilities=caps)
+            driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=ops)
             if incognito_window== True:
                 ops =webdriver.ChromeOptions()
                 ops.add_argument('--incognito')
-                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=ops,desired_capabilities=caps)
+                driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()),options=ops)
             return driver
 
         def page_scroll(driver=None):
