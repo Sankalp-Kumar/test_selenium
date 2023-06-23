@@ -196,7 +196,7 @@ if number_of_vehicles :
         #Chrome automation for generating navigation links for each vehicle.
         #import undetected_chromedriver as uc
         from selenium import webdriver
-        #from webdriver_manager.chrome import ChromeDriverManager
+        from webdriver_manager.chrome import ChromeDriverManager
         from selenium.webdriver.common.by import By
         from selenium.webdriver.chrome.service import Service
         import pandas as pd
@@ -206,6 +206,8 @@ if number_of_vehicles :
         import numpy as np
         import random as rdm
         from selenium.webdriver.chrome.options import Options
+        #from webdriver_manager.chrome import ChromeDriverManager
+
 
         def chrome_setup(chromeheadless = True, incognito_window=False,proxy_capabilities=None):
             '''It set up the Chrome environment to webscraping '''    
