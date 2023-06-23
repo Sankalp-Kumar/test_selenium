@@ -194,8 +194,9 @@ if number_of_vehicles :
             DataFrameDict[key] = master_file[:][master_file.F0 == key]
 
         #Chrome automation for generating navigation links for each vehicle.
-        import undetected_chromedriver as uc
-        from webdriver_manager.chrome import ChromeDriverManager
+        #import undetected_chromedriver as uc
+        from selenium import webdriver
+        #from webdriver_manager.chrome import ChromeDriverManager
         from selenium.webdriver.common.by import By
         from selenium.webdriver.chrome.service import Service
         import pandas as pd
@@ -205,7 +206,7 @@ if number_of_vehicles :
         import numpy as np
         import random as rdm
 
-        def chrome_setup(chromeheadless = False, incognito_window=False,proxy_capabilities=None):
+        def chrome_setup(chromeheadless = True, incognito_window=False,proxy_capabilities=None):
             '''It set up the Chrome environment to webscraping '''    
             ops =webdriver.ChromeOptions()
             ops.headless= chromeheadless
