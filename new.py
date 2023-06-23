@@ -259,7 +259,8 @@ if number_of_vehicles :
         driver = chrome_setup()
         url = 'https://www.google.com/maps/dir///@12.9614647,77.5861919,15z/data=!4m2!4m1!3e0'
         load_url(driver=driver,url=url)
-        driver.implicitly_wait(10)
+        #driver.implicitly_wait(10)
+        time.sleep(5)
 
         list_dic=[]
         #opt_dict = map_df1_dict
