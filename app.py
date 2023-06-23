@@ -38,7 +38,7 @@ options.add_argument('--disable-gpu')
 options.add_argument('--headless')
 
 driver = get_driver()
-driver.get('https://www.amazon.com/')
+driver.get('https://www.amazon.in/')
 
 driver.find_element(By.ID,value='twotabsearchtextbox').send_keys('snacks')
 driver.find_element(By.ID,value='nav-search-submit-text').click()
