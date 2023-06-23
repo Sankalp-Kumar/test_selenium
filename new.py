@@ -272,7 +272,7 @@ if number_of_vehicles :
                 print(k,"\t", v)
                 input_names = v
                 load_url(driver=driver,url=url,new_tab=True)
-                driver.implicitly_wait(5)
+                #driver.implicitly_wait(5)
 
                 while True:
 
