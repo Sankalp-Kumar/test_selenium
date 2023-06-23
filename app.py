@@ -40,6 +40,8 @@ options.add_argument('--headless')
 driver = get_driver()
 driver.get('https://www.amazon.in/')
 
+st.write(driver.title)
+
 driver.find_element(By.ID,value='twotabsearchtextbox').send_keys('snacks')
 driver.find_element(By.ID,value='nav-search-submit-text').click()
 driver.find_element(By.XPATH, value="//span[@class='nav-line-2 nav-progressive-content']").click()
