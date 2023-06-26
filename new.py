@@ -291,10 +291,10 @@ if number_of_vehicles :
                     if len(inputs) == len(input_names):
                         break
                     else:
-                        pass
-                    #     #driver.implicitly_wait(5)
-                    #     time.sleep(10)
-                    #     driver.find_element(By.CSS_SELECTOR,'div.AUkJgf>.PLEQOe.d2cEI').click()
+                        
+                        #driver.implicitly_wait(5)
+                        time.sleep(10)
+                        driver.find_element(By.CSS_SELECTOR,'div.AUkJgf>.PLEQOe.d2cEI').click()
 
                 driver.implicitly_wait(5)
 
