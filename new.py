@@ -276,7 +276,7 @@ if number_of_vehicles :
                 #driver.implicitly_wait(5)
                 time.sleep(5)
                 while True:
-                    time.sleep(5)
+                    time.sleep(10)
                     inputs = driver.find_elements(By.CSS_SELECTOR,'div.JuLCid>div>div>.nhb85d >div>div>input')
                     for i in range(len(inputs)):
                         #time.sleep(3)
