@@ -273,8 +273,8 @@ if number_of_vehicles :
                 print(k,"\t", v)
                 input_names = v
                 load_url(driver=driver,url=url,new_tab=True)
-                driver.implicitly_wait(5)
-
+                #driver.implicitly_wait(5)
+                time.sleep(5)
                 while True:
 
                     inputs = driver.find_elements(By.CSS_SELECTOR,'div.JuLCid>div>div>.nhb85d >div>div>input')
