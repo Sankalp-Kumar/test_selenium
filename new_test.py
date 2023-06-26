@@ -386,8 +386,8 @@ if master_data :
 
                             inputs = driver.find_elements(By.CSS_SELECTOR,'div.JuLCid>div>div>.nhb85d >div>div>input')
                             for i in range(len(inputs)):
-                                #time.sleep(3)
-                                driver.implicitly_wait(5)
+                                time.sleep(5)
+                               # driver.implicitly_wait(5)
                                 inputs[i].clear()
                                 inputs[i].send_keys(input_names[i])
                                 if i+1 == len(inputs):
